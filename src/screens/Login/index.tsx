@@ -4,6 +4,7 @@ import languages from "../../languages/translations";
 import { getLanguageSlice } from "./selectors";
 import SelectLanguage from "../../components/SelectLanguage";
 import ThemeBtn from "../../components/Buttons/ThemeBtn";
+import Input from "../../components/Input";
 
 const Login: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("login");
@@ -63,12 +64,13 @@ const Login: React.FC = () => {
             <div className="login-form">
               <form>
                 <div className="login-form__username">
-                  <label>{languages[language].emailLabel}</label>
-                  <input type="text" />
+                  <Input type="text" label={languages[language].emailLabel} />
                 </div>
                 <div className="login-form__password">
-                  <label>{languages[language].passwordLabel}</label>
-                  <input type={inputType} />
+                  <Input
+                    type={inputType}
+                    label={languages[language].passwordLabel}
+                  />
                 </div>
                 <div className="login-form__options">
                   <div className="login-form__options__password-box">
@@ -90,7 +92,19 @@ const Login: React.FC = () => {
               </form>
             </div>
           ) : (
-            <div>create account</div>
+            <div className="login-form">
+              <form>
+                <div className="login-form__username">
+                  <Input type="text" label={languages[language].emailLabel} />
+                </div>
+                <div className="login-form__password">
+                  <Input
+                    type={inputType}
+                    label={languages[language].passwordLabel}
+                  />
+                </div>
+              </form>
+            </div>
           )}
           <div className="login-container__sub__forms__bottom-options">
             <SelectLanguage />
