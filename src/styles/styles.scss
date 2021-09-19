@@ -1,0 +1,10 @@
+@import "./base/resets.scss";
+@import "./base/variables.scss";
+@import "./base/base.scss";
+
+//screens
+@import "../screens/Login/styles.scss";
+//containers
+//components
+@import "../components/SelectLanguage/styles.scss";
+@import "../components/Buttons/ThemeBtn/styles.scss";

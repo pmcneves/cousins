@@ -1,0 +1,45 @@
+@import "./fonts.scss";
+
+// Spacing
+$s-size: 5px;
+$m-size: 10px;
+$l-size: 15px;
+$xl-size: 20px;
+
+// Font Weight
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// Font Family
+$Roboto: "Roboto", sans-serif;
+$Trajan-Regular: "Trajan Regular";
+$Garamond-Pro: "Garamond Pro";
+$Garamond-Pro-Bold: "Garamond Pro Bold";
+$BebasNeue-Regular: "BebasNeue-Regular";
+
+/////////////// DARK THEME
+[data-theme="dark"] {
+  --primaryBackground: hsl(206, 8%, 10%);
+  --secondaryBackground: hsl(204, 9%, 15%);
+  --terciaryBackground: hsl(204, 9%, 20%);
+  --primaryFontColor: hsl(0, 0%, 70%);
+  --themeBtn: hsl(65, 75%, 50%);
+}
+
+/////////////// LIGHT THEME COLORS
+[data-theme="light"] {
+  --primaryBackground: hsl(0, 0%, 97%);
+  --secondaryBackground: hsl(0, 0%, 90%);
+  --terciaryBackground: hsl(0, 0%, 85%);
+  --primaryFontColor: hsl(0, 0%, 0%);
+  --themeBtn: hsl(166, 95%, 30%);
+}
+
+$off-white-background: #f7f7f7;

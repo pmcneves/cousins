@@ -1,0 +1,142 @@
+.login-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__sub {
+    background-color: var(--secondaryBackground);
+    height: 360px;
+    width: 300px;
+    border-bottom-left-radius: $m-size;
+    border-bottom-right-radius: $m-size;
+    overflow: hidden;
+    &__tabs {
+      display: flex;
+      width: 100%;
+      button {
+        width: 100%;
+        height: 40px;
+        text-transform: uppercase;
+        border: none;
+        font-size: 0.7rem;
+        font-family: $Garamond-Pro-Bold;
+        color: var(--primaryFontColor);
+        background-color: var(--terciaryBackground);
+      }
+      &-left {
+        width: 50%;
+      }
+      &-right {
+        width: 50%;
+      }
+    }
+    &__forms {
+      position: relative;
+      height: 89%;
+      width: 100%;
+      padding-top: 0.5px;
+      color: var(--primaryFontColor);
+      &__brand {
+        font-family: $BebasNeue-Regular;
+        text-align: center;
+        margin-top: $xl-size;
+        font-size: 40px;
+        &__dollar {
+          @extend .login-container__sub__forms__brand;
+          color: var(--themeBtn);
+        }
+      }
+      &__bottom-options {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: $m-size;
+      }
+    }
+  }
+}
+
+.selected-tab {
+  position: relative;
+  border-left: 1px solid #d9d9d6;
+  border-right: 1px solid #d9d9d6;
+  button {
+    background-color: var(--secondaryBackground);
+    border: none;
+    font-weight: $font-weight-bold;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: var(--themeBtn);
+  }
+  &:first-of-type {
+    border-left: none;
+  }
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.login-form {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  form {
+    width: 80%;
+  }
+  &__username,
+  &__password {
+    display: flex;
+    flex-direction: column;
+    margin: $l-size auto;
+    label {
+      font-family: $Garamond-Pro-Bold;
+    }
+    input {
+      background: var(--terciaryBackground);
+      border: none;
+      padding: $s-size;
+      color: var(--primaryFontColor);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__password-box {
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: $s-size;
+      }
+    }
+    &__submitBtn {
+      button {
+        background-color: var(--terciaryBackground);
+        border: none;
+        color: var(--primaryFontColor);
+        padding: $s-size $m-size;
+        font-family: $Garamond-Pro-Bold;
+        font-size: 18px;
+      }
+    }
+  }
+  &__forgot-password {
+    text-align: center;
+    margin-top: $l-size;
+    font-style: italic;
+    cursor: pointer;
+  }
+}
